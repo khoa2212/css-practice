@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --btn-add-width: 100px;
+  --input-date-width: 150px;
+  --box-content-width: 90%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 5px 5px;
+  background-color: #eff1f2;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.box-content {
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  width: var(--box-content-width);
+  height: 60px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 10px 10px 5px rgb(141, 138, 138);
+}
+
+.input-box {
+  font-size: x-large;
+  border: none;
+  outline: none;
+  width: calc(100% - var(--btn-add-width) - var(--input-date-width) - 40px);
+}
+
+.input-date-box {
+  font-size: x-large;
+  border: none;
+  outline: none;
+  width: var(--input-date-width);
+}
+
+.btn-add {
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  width: var(--btn-add-width);
+  height: 50px;
+  color: white;
+  font-size: x-large;
+  background-color: #3b71ca;
+  border: none;
+}
+
+.btn-add:hover {
+  background-color: #204d95;
+}
+
+.line {
+  border: 2px solid #d9cbcc;
+  width: var(--box-content-width);
+  margin: 50px auto;
+  height: 0px;
+}
+
+.box-list {
+  border-radius: 10px;
+  border: 1px solid green;
+  width: var(--box-content-width);
+  height: fit-content;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+  /* display: flex; */
+}
+
+.select-box {
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  width: 200px;
+}
+
+.filter-sort {
+  position: absolute;
+  right: 10px;
+}
+
+.btn-asc-desc {
+  border: none;
+}
+
+.btn-asc-desc:hover {
+  background-color: #3b71ca;
+}
+
+.box-item {
+  border: 1px solid;
+  width: 90%;
+  height: 50px;
+}
+
+.box-action {
+}

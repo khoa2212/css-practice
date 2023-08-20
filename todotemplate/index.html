@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>Todo-list</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <i
+          class="fas fa-check-square"
+          style="color: #3b71ca; font-size: 60px"
+        ></i>
+        <span
+          style="
+            font-size: 60px;
+            color: #3b71ca;
+            text-decoration: underline;
+            margin-left: 10px;
+          "
+          >My Todo-s</span
+        >
+      </div>
+      <div class="box-content">
+        <input class="input-box" type="text" placeholder="Add new..." />
+        <input class="input-date-box" type="date" />
+        <button class="btn-add" type="button">Add</button>
+      </div>
+      <div class="line"></div>
+      <div class="box-list">
+        <div class="filter-sort">
+          <span style="font-size: 17px; margin-right: 15px">Filter</span>
+          <select class="select-box" name="cars" id="cars">
+            <option value="volvo">All</option>
+            <option value="saab">Completed</option>
+            <option value="opel">Active</option>
+            <option value="audi">Has due date</option>
+          </select>
+          <span style="font-size: 17px; margin-right: 15px; margin-left: 80px"
+            >Sort</span
+          >
+          <select class="select-box" name="cars" id="cars">
+            <option value="volvo">Added date</option>
+            <option value="saab">Due date</option>
+          </select>
+          <button
+            onclick="changeIcon()"
+            class="btn-asc-desc"
+            id="btn-asc-desc"
+            name="btn-asc-desc"
+          >
+            <i
+              class="fas fa-sort-up"
+              style="color: #2fa267; font-size: 25px"
+            ></i>
+          </button>
+        </div>
+        <div class="box-item">
+            <input type="checkbox" name="checkbox1" id="checkbox1">
+        </div>
+      </div>
+    </div>
+    <script>
+      function changeIcon() {
+        const classIcon = document
+          .getElementById("btn-asc-desc")
+          .getElementsByClassName("fas fa-sort-up");
+
+        document.getElementById(
+          "btn-asc-desc"
+        ).innerHTML = `<i class="fas fa-sort-${
+          classIcon[0] === undefined ? "up" : "down"
+        }" style="color: #2fa267; font-size: 25px"></i>`;
+      }
+    </script>
+  </body>
+</html>
