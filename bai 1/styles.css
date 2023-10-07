@@ -23,12 +23,14 @@ body {
 .card__heart {
   color: #fcfcfc;
   font-size: large;
+  cursor: pointer;
 }
 
 .card__cart {
   color: #fcfcfc;
   font-size: large;
   float: right;
+  cursor: pointer;
 }
 
 .card__image {
@@ -36,6 +38,7 @@ body {
   height: 122px;
   object-fit: cover;
   display: block;
+  transition: rotate ease-in-out 0.5s, transform ease-in-out 0.5s;
 }
 
 .card__product-name {
@@ -43,6 +46,7 @@ body {
   font-size: x-large;
   text-align: center;
   font-weight: bold;
+  transition: text-align ease-in-out 0.5s, margin-top ease-in-out 0.5s;
 }
 
 .card__product-price {
@@ -50,18 +54,21 @@ body {
   font-size: x-large;
   text-align: center;
   font-weight: bold;
+  transition: text-align ease-in-out 0.5s, margin-top ease-in-out 0.5s;
 }
 
 .card__product-size {
-  margin-top: 35px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   opacity: 0;
+  transition: opacity ease-in-out 0.5s, margin-top ease-in-out 0.5s;
 }
 
 .card__product-size-title {
   color: white;
   font-size: large;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__product-size-number {
@@ -74,6 +81,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__product-color {
@@ -81,11 +89,13 @@ body {
   display: flex;
   align-items: center;
   opacity: 0;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__product-color-title {
   color: white;
   font-size: large;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__product-color-type {
@@ -93,6 +103,7 @@ body {
   height: 22px;
   border-radius: 50%;
   margin-left: 10px;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__btn-buy {
@@ -106,6 +117,8 @@ body {
   border: none;
   font-weight: bold;
   opacity: 0;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__btn-add {
@@ -120,6 +133,8 @@ body {
   margin-left: 5px;
   font-weight: bold;
   opacity: 0;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .card__btn-buy:hover {
@@ -131,90 +146,33 @@ body {
 }
 
 .card:hover > .card__image {
-  animation-name: img-animation;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  rotate: -25deg;
+  transform: translateY(-50px) translateX(25px);
 }
 
 .card:hover > .card__product-name {
-  animation-name: title-name-animation;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  text-align: left;
+  margin-top: -30px;
 }
 
 .card:hover > .card__product-price {
-  animation-name: title-price-animation;
-  animation-duration: 1.2s;
-  animation-fill-mode: forwards;
+  text-align: left;
+  margin-top: -5px;
 }
 
 .card:hover > .card__product-size {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  margin-top: 40px;
+  opacity: 1;
 }
 
 .card:hover > .card__product-color {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  opacity: 1;
 }
 
 .card:hover > .card__btn-buy {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  opacity: 1;
 }
 
 .card:hover > .card__btn-add {
-  animation: appear;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes img-animation {
-  0% {
-    rotate: 0deg;
-    transform: translateY(-50px) translateX(25px);
-  }
-  100% {
-    rotate: -25deg;
-    transform: translateY(-50px) translateX(25px);
-  }
-}
-
-@keyframes title-name-animation {
-  0% {
-    text-align: center;
-  }
-  100% {
-    text-align: left;
-    margin-top: -30px;
-  }
-}
-
-@keyframes title-price-animation {
-  0% {
-    text-align: center;
-  }
-  100% {
-    text-align: left;
-    margin-top: -5px;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 2;
-  }
+  opacity: 1;
 }
